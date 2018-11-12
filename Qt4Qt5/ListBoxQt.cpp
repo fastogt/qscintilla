@@ -189,7 +189,9 @@ void QsciListBoxQt::GetValue(int n, char *value, int len)
         {
             // Save the full selection and trim the value we return.
             sci->acSelection = selection;
+#if 0  // 2 words autoselection
             trim_selection = true;
+#endif
         }
     }
 
