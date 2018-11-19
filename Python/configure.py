@@ -1584,7 +1584,7 @@ macx {
     pro.write('HEADERS = sipAPI%s.h\n' % mname)
 
     pro.write('SOURCES =')
-    for s in os.listdir(module_config.name):
+    for s in sorted(os.listdir(module_config.name)):
         if s.endswith('.cpp'):
             pro.write(' \\\n    %s' % s)
     pro.write('\n')
